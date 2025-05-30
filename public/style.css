@@ -1,0 +1,66 @@
+html {
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("../images/Bg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.Main {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.Anime {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+button:hover .Anime {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+.Content {
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px groove black;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 90%;
+}

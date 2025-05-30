@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <title>My favourite Anime List</title>
+</head>
+
+<body>
+    <center>  
+    <h1>My Favourite Anime</h1><br>
+    <div class="Main">
+  <form action="/Home" method="post">
+    <button type="submit" name="name" value="one">
+      <img class="Anime one" src="../images/jk.png" alt="Jujustu kaisen">
+    </button>
+    <button type="submit" name="name" value="two">
+      <img class="Anime two" src="../images/DS.jpg" alt="Demon Slayer">
+    </button>
+    <button type="submit" name="name" value="three">
+      <img class="Anime three" src="../images/OPM.png" alt="One Punch Man">
+    </button>
+  </form>
+</div>
+
+    <br><br>
+    <div class = "Content">
+        <% if (locals.Data) { %>
+            <h2>The anime 💐<%=Data.fname%> is a good anime.
+                <%=Data.genre%> is the genre where the protagonist 🦸<%=Data.protagonist%> 
+                primarly protecting the world 🌎 from <%=Data.antagonist%> 🦹
+                who has the power 🔥 of <%=Data.evil_power%> but protagonist has the power of <%=Data.power%> ⚡ to the 
+                save the world</h2>
+        <% } else { %>
+            <h2>Click to know about the anime</h2>
+        <% } %>
+    </div>
+    </center>
+</body>
+
+</html>
